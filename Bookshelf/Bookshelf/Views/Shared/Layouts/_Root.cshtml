@@ -1,0 +1,47 @@
+﻿@using EPiServer.Framework.Web.Mvc.Html
+@using EPiServer.Core
+@using Bookshelf.Models.Pages
+@using Bookshelf.Models.ViewModels
+@using System.Web.Optimization
+
+@model IPageViewModel<SitePageData>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>@Model.CurrentPage.Name</title>
+    @Html.CanonicalLink()
+    @Html.AlternateLinks()
+    @Styles.Render("~/bundles/css")
+    @Scripts.Render("~/bundles/js")
+    
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+</head>
+<body @*style="background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/bg-sky.png); background-repeat: repeat !important; background-attachment: fixed; "*@>
+   
+
+    @* Renders quick naviation in top right corner*@
+    @Html.RenderEPiServerQuickNavigator()
+
+    @*refresh page when changing a property to support oate type boolean affecting other properties in the same pagetype*@
+    @Html.FullRefreshPropertiesMetaData()
+
+
+    <div class="container">
+
+        @{Html.RenderPartial("Header", Model);}
+
+        <hr />
+        @RenderBody()
+
+        @*@{Html.RenderPartial("Footer", Model);}*@
+    </div>
+    @Html.RequiredClientResources("Footer")
+
+   
+</body>
+</html>
+
+

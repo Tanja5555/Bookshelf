@@ -1,0 +1,16 @@
+﻿@model Bookshelf.Models.ViewModels.PageViewModel<Bookshelf.Models.Pages.WishBookPage>
+
+@{ Layout = "~/Views/Shared/Layouts/_TwoPlusOne.cshtml"; }
+
+
+<h3 @Html.EditAttributes(x => x.CurrentPage.PageName)>@Model.CurrentPage.PageName</h3>
+
+@section RelatedContent 
+{
+    @Html.LabelFor(x => x.CurrentPage.Category):
+    @Html.PropertyFor(x => x.CurrentPage.Category)
+}
+  
+
+
+

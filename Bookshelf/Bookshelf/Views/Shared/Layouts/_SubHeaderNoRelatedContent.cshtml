@@ -1,0 +1,20 @@
+﻿@using Bookshelf.Models.ViewModels
+@using Bookshelf.Models.Pages
+
+@model IPageViewModel<SitePageData>
+
+@{Layout = "~/Views/Shared/Layouts/_Root.cshtml";}
+
+<div class="row">
+    <div class="col-md-12">
+        @{Html.RenderPartial("SubNavigationOneLevel", Model);}
+    </div>
+</div>
+@{Html.RenderPartial("Breadcrumbs", Model);}
+
+<div class="row">
+    <div class="col-md-12">
+        @RenderBody()
+    </div>
+</div>
+

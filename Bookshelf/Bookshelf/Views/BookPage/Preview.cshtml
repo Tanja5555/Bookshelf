@@ -1,0 +1,21 @@
+﻿@using EPiServer.Core
+@using EPiServer.Editor
+@using EPiServer.Web.Mvc.Html
+@using Bookshelf.Models.ViewModels
+
+@model BookItemModel
+
+<div class="listResult">
+    <h3>
+        @Html.PageLink(Model.CurrentPage)
+    </h3>
+  
+    <span>Category:
+        @foreach (var item in Model.Tags)
+        {
+            <span class="icon-tags">&nbsp;  </span>   <a href="@item.Url">@item.Title</a>
+        }
+    </span>
+    <hr />
+</div>
+

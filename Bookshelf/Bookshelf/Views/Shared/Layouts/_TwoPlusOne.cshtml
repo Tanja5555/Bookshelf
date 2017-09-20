@@ -1,0 +1,15 @@
+﻿@{ Layout = "~/Views/Shared/Layouts/_Root.cshtml";}
+@{Html.RenderPartial("Breadcrumbs");}
+
+<div class="row">
+    <div class="col-md-9">
+        @RenderBody()
+    </div>
+    <div class="col-md-3 border">
+        @if(IsSectionDefined("RelatedContent"))
+        {
+            @RenderSection("RelatedContent")
+        }
+    </div>
+</div>
+

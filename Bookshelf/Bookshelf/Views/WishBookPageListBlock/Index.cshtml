@@ -1,0 +1,12 @@
+﻿@model Bookshelf.Models.ViewModels.WishBookPageListModel
+
+
+<h4 >@Model.Heading</h4>
+<br />
+
+@foreach (var page in Model.Pages)
+{
+        <h5>
+            @Html.PageLink(page)
+        </h5>
+}

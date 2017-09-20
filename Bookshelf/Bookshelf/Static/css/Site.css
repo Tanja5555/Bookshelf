@@ -1,0 +1,277 @@
+﻿body {
+   margin-top:15px;
+   margin-bottom:15px;
+    font-family:'Century Gothic';
+    font-size:15px;  
+}
+
+ /*Set padding to keep content from hitting the edges 
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family:'Century Gothic';
+    font-size:15px;  
+}*/
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.center{
+    text-align:center;
+}
+/*Portfolio */
+
+.skill{
+   margin-right:20px;
+   display:inline-flex;
+   margin-bottom:20px;
+   margin-top:10px;
+}
+
+.skillFrame{
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 10px; 
+    width:auto;
+}
+.presentationBlock{
+    position:absolute;
+    border: 1px solid darkgray;
+    height:500px;
+    width:1150px;
+}
+
+.backgroundImage img{
+    position:absolute;
+    width:100%;
+    height:250px;
+    z-index: 1;
+}
+
+.personImage{
+    position:absolute;
+    margin-top:120px;
+    margin-left:39%;
+    width:250px;
+    width:250px;
+    z-index: 2;
+}
+
+.presentationText{
+    margin-top:380px;
+}
+
+.nameText{
+    font-size:25px;
+    font-weight:bold;
+}
+
+/*-------------------------------------------------- */
+
+.categorypage .partialImage {width:auto; height:300px;}
+
+.img{ width:100%; height:auto;}
+
+.underMenu p {
+    display:inline-flex;
+}
+
+.marginBottom{
+    margin-bottom:20px;
+}
+
+/*inline subnavigation start*/
+
+.bookshelfDropClass{
+    margin-top:20px;
+    margin-bottom:30px;
+    text-decoration:none;
+}
+
+.bookshelfDropClass a{
+    margin-right:50px;
+    color: black;
+    font-family:'Century Gothic';
+    font-size:15px;
+    text-decoration:none;
+}	
+
+.bookshelfDropClass a:hover,
+.bookshelfDropClass a:focus {
+  color: #2980bd;
+  text-decoration:none;
+}
+
+.bookshelfDropClass .active {
+    color: black;
+    border-bottom: 2px solid black;
+    font-size:15px
+}
+/*------------------------------------*/
+
+/*breadcrumbs start*/
+
+.bookshelfBreadcrumb {
+	background:none;
+	list-style-type:none;
+	/*margin:0 0 -20px 0;*/
+	/*padding:7px 14px;*/
+	}	
+	
+.bookshelfBreadcrumb li {
+	display:inline;	
+	}
+	
+.bookshelfBreadcrumb .divider {
+	color:blue;
+	padding:0 5px;	
+	}
+
+/*---------------------------------*/
+
+.marginBottomCol{
+    margin-bottom:30px;
+    margin-top:20px;
+}
+
+.default-space {
+    margin-bottom:10px;
+}
+
+.border {
+    border-radius: 4px;
+    border: 1px solid #d6d6d6;
+    text-align: center;
+    overflow: hidden;
+	}
+
+.transparentClass {
+    background-color:transparent;
+    border-color: transparent;
+}
+
+.btn-default {
+  color: white;
+  background-color: black;
+  border:2px solid white;
+  font-family:'Century Gothic';
+  font-size:15px;  
+}
+
+.btn-default:focus,
+.btn-default.focus {
+  color: white;
+  background-color: #2980bd;
+  border:2px solid white;
+}
+
+.btn-default:hover {
+  color: white;
+  background-color: #2980bd;
+  border:2px solid white;
+}
+
+/* css för navbar */
+.customMenu .navbar .nav > li.active > a {
+    width:100%;
+    color: black;
+    border-bottom: 2px solid black;
+    font-family:'Century Gothic';
+    font-size:18px;
+}
+
+.customMenu .navbar .nav > li > a {
+    width:100%;
+    color: black;
+    font-family:'Century Gothic';
+    font-size:18px;
+	}	
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .open > a {
+    background-image:none;
+    box-shadow: none;
+}
+
+.navbar-default {
+  background-color: transparent;
+  border-color: none;
+}
+.navbar-default .navbar-brand {
+  font-family:'Century Gothic';
+  font-size:30px;
+  color: black; 
+  margin-right:80px;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  font-family:'Century Gothic';
+  font-size:30px;
+  color: #2980bd;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #2980bd;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  background-color: transparent;
+}
+/*-------------------------------------------------------------*/
+
+
+/* css för karusel*/
+.carousel-frame {
+    width:100%;
+    height:500px;
+    padding:90px 0 90px 0;
+}
+
+.general-caption {
+    margin: 0px 25px 0px 145px;   
+}
+
+.carousel-indicators {
+    bottom: 3px;
+}
+
+.carousel-indicators li {
+  border: 1px solid black;
+}
+
+.carousel-indicators .active {
+  background-color: black;
+}
+
+.carousel-caption {
+  position: absolute;
+  float:left;
+  right: 50px;
+  bottom: 55px;
+  left: 250px;
+  color: black;
+  text-align: center;
+}
+
+.carousel-control .icon-prev,
+.carousel-control .icon-next,
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .glyphicon-chevron-right {
+    color: black;
+}
+
+.carousel-control.left {
+    background-image: none;
+}
+
+.carousel-control.right {
+    background-image: none;
+}
+/* ------------------------------------------------- */

@@ -1,0 +1,14 @@
+﻿
+@model Bookshelf.Models.ViewModels.PageViewModel<Bookshelf.Models.Pages.CategoryPage>
+
+
+@{ Layout = "~/Views/Shared/Layouts/_SubHeader.cshtml"; }
+
+@Html.PropertyFor(m => m.CurrentPage.BookList)
+
+
+@section RelatedContent
+{
+    <div class="row">@Html.PropertyFor(x => x.CurrentPage.PageImage)</div>
+    <div class="row">@Html.PropertyFor(x => x.CurrentPage.RelatedContentArea) </div>      
+}
