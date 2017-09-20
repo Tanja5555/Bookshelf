@@ -292,3 +292,5 @@ __pycache__/
 /Bookshelf/Bookshelf/modules/_protected/repository.config
 /Bookshelf/Bookshelf/find.config
 
+/Bookshelf/Bookshelf/modules/_protected
+/Bookshelf/Bookshelf/App_Data/Index/Ref
