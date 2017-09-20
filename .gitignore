@@ -286,3 +286,9 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
+
+/Bookshelf/Bookshelf/App_Data/Index/Main
+/Bookshelf/Bookshelf/App_Data/blobs
+/Bookshelf/Bookshelf/modules/_protected/repository.config
+/Bookshelf/Bookshelf/find.config
+
