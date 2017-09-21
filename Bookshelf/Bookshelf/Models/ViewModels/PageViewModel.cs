@@ -10,12 +10,11 @@ namespace Bookshelf.Models.ViewModels
         public PageViewModel(T currentPage)
         {
             CurrentPage = currentPage;
-            Section = ContentExtensions.GetSection(CurrentPage.ContentLink);
         }
-
 
         public T CurrentPage { get; private set; }
         public IContent Section { get; set; }
+        public LayoutModel Layout { get; set; }
     }
 
     public static class PageViewModel

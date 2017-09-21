@@ -47,21 +47,21 @@ namespace Bookshelf.Business
             }
         }
 
-        public static string ExternalURLFromReference(this PageReference p)
-        {
-            PageData page = DataFactory.Instance.Get<PageData>(p);
+        //public static string ExternalURLFromReference(this PageReference p)
+        //{
+        //    PageData page = DataFactory.Instance.Get<PageData>(p);
 
-            UrlBuilder pageURLBuilder = new UrlBuilder(page.LinkURL);
+        //    UrlBuilder pageURLBuilder = new UrlBuilder(page.LinkURL);
 
-            Global.UrlRewriteProvider.ConvertToExternal(pageURLBuilder, page.PageLink, UTF8Encoding.UTF8);
+        //    Global.UrlRewriteProvider.ConvertToExternal(pageURLBuilder, page.PageLink, UTF8Encoding.UTF8);
 
-            string pageURL = pageURLBuilder.ToString();
+        //    string pageURL = pageURLBuilder.ToString();
 
-            UriBuilder uriBuilder = new UriBuilder(EPiServer.Web.SiteDefinition.Current.SiteUrl);
+        //    UriBuilder uriBuilder = new UriBuilder(EPiServer.Web.SiteDefinition.Current.SiteUrl);
 
-            uriBuilder.Path = pageURL;
+        //    uriBuilder.Path = pageURL;
 
-            return uriBuilder.Uri.AbsoluteUri;
-        }
+        //    return uriBuilder.Uri.AbsoluteUri;
+        //}
     }
 }

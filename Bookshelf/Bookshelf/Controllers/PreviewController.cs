@@ -9,26 +9,79 @@ using EPiServer.Framework.Web;
 using EPiServer.Web;
 using EPiServer.ServiceLocation;
 using Bookshelf.Models.ViewModels;
+using Bookshelf.Models.Pages;
+using Bookshelf.Business;
 
 namespace Bookshelf.Controllers
 {
-    [TemplateDescriptor(Inherited = true,
-       TemplateTypeCategory = TemplateTypeCategories.MvcController,
+    [TemplateDescriptor(
+       Inherited = true,
+       TemplateTypeCategory = TemplateTypeCategories.MvcController, //Required as controllers for blocks are registered as MvcPartialController by default
        Tags = new[] { RenderingTags.Preview, RenderingTags.Edit },
        AvailableWithoutTag = false)]
-    public class PreviewController : ActionControllerBase, IRenderTemplate<BlockData>
+    [VisitorGroupImpersonation]
+    public class PreviewController : ActionControllerBase, IRenderTemplate<BlockData>, IModifyLayout
     {
-        //
-        // GET: /Preview/
+        private readonly IContentLoader _contentLoader;
+        private readonly TemplateResolver _templateResolver;
+        private readonly DisplayOptions _displayOptions;
+
+        public PreviewController(IContentLoader contentLoader, TemplateResolver templateResolver, DisplayOptions displayOptions)
+        {
+            _contentLoader = contentLoader;
+            _templateResolver = templateResolver;
+            _displayOptions = displayOptions;
+        }
 
         public ActionResult Index(IContent currentContent)
         {
-            var contentRepository = ServiceLocator.Current.GetInstance<IContentRepository>();
-            var startPage = contentRepository.Get<PageData>(ContentReference.StartPage);
-            var model = new BlockEditPageViewModel(startPage, currentContent);
+            //As the layout requires a page for title etc we "borrow" the start page
+            var startPage = _contentLoader.Get<StartPage>(SiteDefinition.Current.StartPage);
+
+            var model = new PreviewModel(startPage, currentContent);
+
+            var supportedDisplayOptions = _displayOptions
+                .Select(x => new { Tag = x.Tag, Name = x.Name, Supported = SupportsTag(currentContent, x.Tag) })
+                .ToList();
+
+            if (supportedDisplayOptions.Any(x => x.Supported))
+            {
+                foreach (var displayOption in supportedDisplayOptions)
+                {
+                    var contentArea = new ContentArea();
+                    contentArea.Items.Add(new ContentAreaItem
+                    {
+                        ContentLink = currentContent.ContentLink
+                    });
+                    var areaModel = new PreviewModel.PreviewArea
+                    {
+                        Supported = displayOption.Supported,
+                        AreaTag = displayOption.Tag,
+                        AreaName = displayOption.Name,
+                        ContentArea = contentArea
+                    };
+                    model.Areas.Add(areaModel);
+                }
+            }
 
             return View(model);
         }
 
+        private bool SupportsTag(IContent content, string tag)
+        {
+            var templateModel = _templateResolver.Resolve(HttpContext,
+                                      content.GetOriginalType(),
+                                      content,
+                                      TemplateTypeCategories.MvcPartial,
+                                      tag);
+
+            return templateModel != null;
+        }
+
+        public void ModifyLayout(LayoutModel layoutModel)
+        {
+            layoutModel.HideHeader = true;
+            layoutModel.HideFooter = true;
+        }
     }
 }

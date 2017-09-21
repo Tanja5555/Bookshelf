@@ -47,20 +47,5 @@ namespace Bookshelf.Business
             }
             return page.VisibleInMenu;
         }
-
-        // Ger mig sektionen var min sida befinner sig i. Används för att bygga våran submeny
-        public static IContent GetSection(ContentReference contentLink)
-        {
-            var currentContent = DataFactory.Instance.Get<IContent>(contentLink);
-            if (currentContent.ParentLink != null && currentContent.ParentLink.CompareToIgnoreWorkID(ContentReference.StartPage))
-            {
-                return currentContent;
-            }
-
-            return DataFactory.Instance.GetAncestors(contentLink)
-                .OfType<PageData>()
-                .SkipWhile(x => x.ParentLink == null || !x.ParentLink.CompareToIgnoreWorkID(ContentReference.StartPage))
-                .FirstOrDefault();
-        }
     }
 }

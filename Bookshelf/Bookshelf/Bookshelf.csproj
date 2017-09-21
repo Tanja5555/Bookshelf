@@ -270,8 +270,11 @@
     <Compile Include="Business\BookTagInitialization.cs" />
     <Compile Include="Business\ContentExtensions.cs" />
     <Compile Include="Business\ExtensionMethods.cs" />
+    <Compile Include="Business\IModifyLayout.cs" />
     <Compile Include="Business\Initialization\BundleConfig.cs" />
     <Compile Include="Business\DependencyResolverInitialization.cs" />
+    <Compile Include="Business\PageContextActionFilter.cs" />
+    <Compile Include="Business\PageViewContextFactory.cs" />
     <Compile Include="Business\StructureMapDependencyResolver.cs" />
     <Compile Include="Business\PageTypeExtensions.cs" />
     <Compile Include="Business\TagFactory.cs" />
@@ -285,15 +288,14 @@
     <Compile Include="Controllers\PageListBlockController.cs" />
     <Compile Include="Controllers\PresentationBlockController.cs" />
     <Compile Include="Controllers\PreviewController.cs" />
-    <Compile Include="Controllers\SearchPageController.cs" />
     <Compile Include="Controllers\SlideShowBlockController.cs" />
-    <Compile Include="Controllers\StandardPageController.cs" />
     <Compile Include="Controllers\WishBookPageListBlockController.cs" />
     <Compile Include="Controllers\PagePartialController.cs" />
     <Compile Include="Controllers\StartPageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Global.cs" />
     <Compile Include="Helpers\HtmlHelpers.cs" />
     <Compile Include="Models\Blocks\BookPageListBlock.cs" />
     <Compile Include="Models\Blocks\MapBlock.cs" />
@@ -314,13 +316,13 @@
     <Compile Include="Models\Pages\StartPage.cs" />
     <Compile Include="Models\Pages\WishBookPage.cs" />
     <Compile Include="Models\Pages\WishBookListPage.cs" />
-    <Compile Include="Models\ViewModels\BlockEditPageViewModel.cs" />
     <Compile Include="Models\ViewModels\BookItemModel.cs" />
     <Compile Include="Models\ViewModels\IPageViewModel.cs" />
+    <Compile Include="Models\ViewModels\LayoutModel.cs" />
     <Compile Include="Models\ViewModels\PageListModel.cs" />
     <Compile Include="Models\ViewModels\PageViewModel.cs" />
     <Compile Include="Models\ViewModels\BookPageListModel.cs" />
-    <Compile Include="Models\ViewModels\SearchPageViewModel.cs" />
+    <Compile Include="Models\ViewModels\PreviewModel.cs" />
     <Compile Include="Models\ViewModels\SlideShowViewModel.cs" />
     <Compile Include="Models\ViewModels\WishBookPageListModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -399,7 +401,6 @@
     <Content Include="Views\PageListBlock\Index.cshtml" />
     <Content Include="Views\Shared\SubNavigation.cshtml" />
     <Content Include="Views\StandardPage\Index.cshtml" />
-    <Content Include="Views\SearchPage\Index.cshtml" />
     <Content Include="Views\Shared\Layouts\_SubHeader.cshtml" />
     <Content Include="Views\Shared\SubNavigationOneLevel.cshtml" />
     <Content Include="Views\BookPage\Full.cshtml" />
