@@ -1,0 +1,2 @@
+//>>built
+define("epi-cms/content-approval/command/ApproveChanges",["dojo/_base/declare","epi/i18n!epi/nls/episerver.cms.contentapproval.command.approvechanges","epi-cms/content-approval/command/_ApprovalTransitionCommand"],function(_1,_2,_3){return _1([_3],{label:_2.label,executingLabel:_2.label,executeMethod:"approveChanges"});});

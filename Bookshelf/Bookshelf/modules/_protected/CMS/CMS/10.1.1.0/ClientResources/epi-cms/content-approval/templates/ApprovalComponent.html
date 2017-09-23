@@ -1,0 +1,45 @@
+<div class="epi-content-approval">
+    <div class="epi-localToolbar epi-viewHeaderContainer" data-dojo-type="dijit/Toolbar">
+        <div class="epi-toolbarGroupContainer">
+            <div class="epi-toolbarGroup epi-toolbarLeading">
+                <div data-dojo-attach-point="breadcrumb" data-dojo-type="epi-cms/widget/Breadcrumb"></div>
+            </div>
+            <div class="epi-toolbarGroup epi-toolbarTrailing" data-dojo-attach-point="commandNode">
+                <div data-dojo-attach-point="validation" data-dojo-type="epi-cms/widget/NotificationStatusBar"></div>
+            </div>
+        </div>
+    </div>
+    <div data-dojo-attach-point="containerNode" class="epi-content-approval__container">
+        <div class="epi-content-approval__header">
+            <h1>${resources.title}</h1>
+            <p>
+                ${resources.instructions.part1}
+                <em>${resources.instructions.part2}</em>
+                ${resources.instructions.part3}
+            </p>
+            <p>${resources.instructions.part4}</p>
+            <div class="epi-content-approval__settings">
+                <span class="dijitInline">
+                    <input id="enable-approval" data-dojo-attach-point="enableButton" data-dojo-type="dijit/form/RadioButton">
+                    <label class="dijitInline" for="enable-approval">${resources.enabled}</label>
+                </span>
+                <span class="dijitInline">
+                    <input id="inherit-approval" data-dojo-attach-point="inheritButton" data-dojo-type="dijit/form/RadioButton">
+                    <label class="dijitInline" for="inherit-approval">${resources.inherited}</label>
+                </span>
+                <span class="dijitInline">
+                    <input id="disabled-approval" data-dojo-attach-point="disableButton" data-dojo-type="dijit/form/RadioButton">
+                    <label class="dijitInline" for="disabled-approval">${resources.disabled}</label>
+                </span>
+            </div>
+        </div>
+        <div class="epi-content-approval__disabled-warning" data-dojo-attach-point="disabledWarningNode">
+            ${resources.disabledwarning}
+        </div>
+        <div class="epi-content-approval__filter" data-dojo-attach-point="filterNode">
+            <span class="dijitInline">${resources.languagefilter.description}</span>
+            <div data-dojo-attach-point="languageFilter" data-dojo-type="dijit/form/Select" class="epi-chromeless epi-chromeless--with-arrow epi-visibleLink"></div>
+        </div>
+        <div data-dojo-attach-point="stepList" data-dojo-type="epi-cms/content-approval/ApprovalStepList"></div>
+    </div>
+</div>

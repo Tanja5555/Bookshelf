@@ -333,7 +333,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Business\ProfileInfo\" />
+    <Folder Include="Business\Jobs\" />
     <Folder Include="Models\Properties\" />
     <Folder Include="Views\Shared\Blocks\" />
   </ItemGroup>
@@ -410,6 +410,7 @@
     <Content Include="Views\Shared\Layouts\_SubHeaderNoRelatedContent.cshtml" />
     <Content Include="Views\MapBlock\Index.cshtml" />
     <Content Include="Views\Preview\Index.cshtml" />
+    <Content Include="Views\Shared\TemplateHint.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
