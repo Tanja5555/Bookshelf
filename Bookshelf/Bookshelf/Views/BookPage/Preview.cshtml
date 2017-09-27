@@ -14,7 +14,6 @@
         @foreach (var item in Model.Tags)
         {
             <span class="icon-tags">&nbsp;  </span>   <a href="@item.Url">@item.Title</a>
-            @Html.PropertyFor(x => x.CurrentPage.Author)
         }
     </span>
     <hr />

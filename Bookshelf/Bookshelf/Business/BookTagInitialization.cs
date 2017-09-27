@@ -24,7 +24,7 @@ namespace Bookshelf.Business
 
             var partialRouter = new BookPartialRouter();
 
-            RouteTable.Routes.RegisterPartialRouter<SitePageData, Category>(partialRouter);
+            RouteTable.Routes.RegisterPartialRouter<StandardPage, Category>(partialRouter);
         }
 
         private void CreatingContent(object sender, ContentEventArgs e)

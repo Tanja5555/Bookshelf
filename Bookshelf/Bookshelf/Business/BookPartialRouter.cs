@@ -12,7 +12,7 @@ using System.Web.Routing;
 
 namespace Bookshelf.Business
 {
-    public class BookPartialRouter : IPartialRouter<SitePageData, Category>
+    public class BookPartialRouter : IPartialRouter<StandardPage, Category>
     {
         public PartialRouteData GetPartialVirtualPath(Category cat, string language, RouteValueDictionary routeValues, RequestContext requestContext)
         {
@@ -31,7 +31,7 @@ namespace Bookshelf.Business
 
         }
 
-        public object RoutePartial(SitePageData content, EPiServer.Web.Routing.Segments.SegmentContext segmentContext)
+        public object RoutePartial(StandardPage content, EPiServer.Web.Routing.Segments.SegmentContext segmentContext)
         {
             //Expected format is Name/<otional>Header/
             var namePart = segmentContext.GetNextValue(segmentContext.RemainingPath);

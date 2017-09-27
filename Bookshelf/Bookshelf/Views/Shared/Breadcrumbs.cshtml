@@ -22,9 +22,12 @@
     }
 }
 
-<div class="bookshelfBreadcrumb">
-    @Html.ContentLink(SiteDefinition.Current.StartPage)
-    <span class="divider">/</span>
-    @Html.MenuList(SiteDefinition.Current.StartPage, ItemTemplate, requireVisibleInMenu: false, requirePageTemplate: false)
+<div class="row">
+    <div class="col-md-12">
+        <ul class="bookshelfBreadcrumb">
+            @Html.ContentLink(SiteDefinition.Current.StartPage)
+            <span class="divider">/</span>
+            @Html.MenuList(SiteDefinition.Current.StartPage, ItemTemplate, requireVisibleInMenu: false, requirePageTemplate: false)
+        </ul>
+    </div>
 </div>
-  
