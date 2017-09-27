@@ -1,7 +1,5 @@
 ﻿@model Bookshelf.Models.ViewModels.PageViewModel<Bookshelf.Models.Pages.ListingPage>
 
-@{ Layout = "~/Views/Shared/Layouts/_Root.cshtml"; }
-
-@{Html.RenderPartial("Breadcrumbs");}
+@{ Layout = "~/Views/Shared/Layouts/_SubHeader.cshtml"; }
 
 @Html.PropertyFor(m => m.CurrentPage.List)
