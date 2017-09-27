@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using StructureMap;
+using EPiServer.ServiceLocation;
 
 namespace Bookshelf.Business
 {
-    public class StructureMapDependencyResolver : IDependencyResolver
+    public class ServiceLocatorDependencyResolver : IDependencyResolver
     {
-        readonly IContainer _container;
+        readonly IServiceLocator _serviceLocator;
 
-        public StructureMapDependencyResolver(IContainer container)
+        public ServiceLocatorDependencyResolver(IServiceLocator serviceLocator)
         {
-            _container = container;
+            _serviceLocator = serviceLocator;
         }
 
         public object GetService(Type serviceType)
@@ -28,8 +29,7 @@ namespace Bookshelf.Business
         {
             try
             {
-                // Can't use TryGetInstance here because it won’t create concrete types
-                return _container.GetInstance(serviceType);
+                return _serviceLocator.GetInstance(serviceType);
             }
             catch (StructureMapException)
             {
@@ -39,12 +39,13 @@ namespace Bookshelf.Business
 
         private object GetInterfaceService(Type serviceType)
         {
-            return _container.TryGetInstance(serviceType);
+            object instance;
+            return _serviceLocator.TryGetExistingInstance(serviceType, out instance) ? instance : null;
         }
 
         public IEnumerable<object> GetServices(Type serviceType)
         {
-            return _container.GetAllInstances(serviceType).Cast<object>();
+            return _serviceLocator.GetAllInstances(serviceType).Cast<object>();
         }
     }
 }

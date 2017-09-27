@@ -8,18 +8,17 @@ using EPiServer;
 
 namespace Bookshelf.Business
 {
-    // Extension methods för Content
+
+    /// <summary>
+    /// Extension methods for content
+    /// </summary>
     public static class ContentExtensions
     {
-        //DataFactory.Instance.Get
-        public static IContent Get<TContent>(this ContentReference contentLink) where TContent : IContent
-        {
-            return DataFactory.Instance.Get<TContent>(contentLink);
-        }
-
-        //Filtrerar Content så att den inte är synlig för användare
+        /// <summary>
+        /// Filters content which should not be visible to the user. 
+        /// </summary>
         public static IEnumerable<T> FilterForDisplay<T>(this IEnumerable<T> contents, bool requirePageTemplate = false, bool requireVisibleInMenu = false)
-           where T : IContent
+            where T : IContent
         {
             var accessFilter = new FilterAccess();
             var publishedFilter = new FilterPublished();
@@ -37,7 +36,6 @@ namespace Bookshelf.Business
             return contents;
         }
 
-        // En boolean metod som visar om sidan är synlig i menyn eller ej
         private static bool VisibleInMenu(IContent content)
         {
             var page = content as PageData;

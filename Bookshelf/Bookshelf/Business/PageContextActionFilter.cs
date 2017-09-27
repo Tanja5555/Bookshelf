@@ -15,7 +15,7 @@ namespace Bookshelf.Business
     /// and other page framework components allowing the controllers to focus on the specifics for the page types
     /// and actions that they handle. 
     /// </remarks>
-    public class PageContextActionFilter
+    public class PageContextActionFilter : IResultFilter
     {
         private readonly PageViewContextFactory _contextFactory;
         public PageContextActionFilter(PageViewContextFactory contextFactory)
