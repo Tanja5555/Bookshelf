@@ -118,8 +118,7 @@ textarea {
 .bookshelfBreadcrumb {
 	background:none;
 	list-style-type:none;
-	/*margin:0 0 -20px 0;*/
-	/*padding:7px 14px;*/
+	margin-bottom:20px;
 	}	
 	
 .bookshelfBreadcrumb li {
@@ -275,3 +274,7 @@ textarea {
     background-image: none;
 }
 /* ------------------------------------------------- */
+
+.titleMargin{
+    margin-left:15px;
+}
