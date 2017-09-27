@@ -31,10 +31,10 @@ namespace Bookshelf.Business
 
             var start = FindParentByPageType(currentPage, typeof(StandardPage), contentLocator);
 
-            //var listingPage = contentLocator.GetChildren<ListingPage>(start.ContentLink);
+            var listingPage = contentLocator.GetChildren<ListingPage>(start.ContentLink);
 
             var urlResolver = ServiceLocator.Current.GetInstance<UrlResolver>();
-            var pageUrl = urlResolver.GetUrl(start.ContentLink);
+            var pageUrl = urlResolver.GetUrl(listingPage.First().ContentLink);
 
             var url = String.Format("{0}{1}", pageUrl, cat.Name);
 

@@ -118,8 +118,7 @@ textarea {
 .bookshelfBreadcrumb {
 	background:none;
 	list-style-type:none;
-	/*margin:0 0 -20px 0;*/
-	/*padding:7px 14px;*/
+	margin-bottom:20px;
 	}	
 	
 .bookshelfBreadcrumb li {
@@ -190,6 +189,7 @@ textarea {
     font-family:'Century Gothic';
     font-size:18px;
 	}	
+
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .open > a {
     background-image:none;
@@ -275,3 +275,11 @@ textarea {
     background-image: none;
 }
 /* ------------------------------------------------- */
+
+.cover-image{
+   padding-left:0;
+}
+
+.titleMargin{
+    margin-left:15px;
+}

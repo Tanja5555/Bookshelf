@@ -8,10 +8,9 @@
 <div class="row">
     <div class="col-md-12">
         @{Html.RenderPartial("SubNavigationOneLevel", Model);}
-        <br />
+        @{Html.RenderPartial("Breadcrumbs", Model);}
     </div>
 </div>
-@{Html.RenderPartial("Breadcrumbs", Model);}
 
 <div class="row">
     <div class="col-md-12">
