@@ -1,2 +1,0 @@
-//>>built
-define("epi-cms/notification/command/MarkNotificationAsRead",["dojo/_base/declare","epi/shell/command/_PropertyWatchCommand","epi/i18n!epi/cms/nls/episerver.cms.notification.command"],function(_1,_2,_3){return _1([_2],{category:"itemContext",label:_3.markasread,canExecute:false,propertiesToWatch:["selectedNotification"],_execute:function(){return this.model.markSelectedNotificationAsRead();},_onPropertyChanged:function(){var _4=this.model.selectedNotification;var _5=!!_4&&!_4.hasRead;this.set("canExecute",_5);}});});
