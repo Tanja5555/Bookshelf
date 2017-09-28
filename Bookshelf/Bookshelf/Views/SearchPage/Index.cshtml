@@ -1,0 +1,33 @@
+﻿@using Bookshelf.Business
+@model Bookshelf.Models.ViewModels.SearchPageViewModel
+
+<div class="row">
+    <div class="span8">
+        @using (Html.BeginForm(null, null, null, EPiServer.Editor.PageEditing.PageIsInEditMode ? FormMethod.Post : FormMethod.Get))
+        {
+            <input type="text" tabindex="1" name="q" value="@Model.SearchText" />
+            <input type="submit" tabindex="2" class="btn" value="Search" />
+        }
+
+        @if (Model.SearchResult != null)
+        {
+            <div class="row">
+                <div class="span8 grayHead">
+                    <h2>Search Results</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span8 SearchResults">
+                    @foreach (var item in Model.SearchResult)
+                    {
+                        <div class="listResult">
+                            <h3><a href="@item.GetExternalUrl()">@item.Title</a></h3>
+                            <p>@item.DisplayText.TruncateAtWord(20)</p>
+                            <hr />
+                        </div>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+</div>

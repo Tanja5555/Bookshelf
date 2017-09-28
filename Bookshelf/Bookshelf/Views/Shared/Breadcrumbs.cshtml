@@ -1,0 +1,31 @@
+﻿@using EPiServer.Core
+@using EPiServer.Web
+@using Bookshelf.Helpers
+
+@helper ItemTemplate(HtmlHelpers.MenuItem breadcrumbs)
+{
+    if (breadcrumbs.Selected)
+    {
+        if (breadcrumbs.Page.HasTemplate() && !breadcrumbs.Page.ContentLink.CompareToIgnoreWorkID(Model.CurrentPage.ContentLink))
+        {
+                @Html.PageLink(breadcrumbs.Page)
+        }
+        else
+        {
+                @breadcrumbs.Page.PageName
+        }
+        if (!breadcrumbs.Page.ContentLink.CompareToIgnoreWorkID(Model.CurrentPage.ContentLink))
+        {
+                <span class="divider">/</span>
+                @Html.MenuList(breadcrumbs.Page.ContentLink, ItemTemplate)
+        }
+    }
+}
+
+
+<div class="bookshelfBreadcrumb">
+    @Html.ContentLink(SiteDefinition.Current.StartPage)
+    <span class="divider">/</span>
+    @Html.MenuList(SiteDefinition.Current.StartPage, ItemTemplate, requireVisibleInMenu: false, requirePageTemplate: false)
+</div>
+ 

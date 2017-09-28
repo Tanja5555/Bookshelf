@@ -1,0 +1,26 @@
+﻿@using EPiServer.Core
+@using EPiServer.Editor
+@using EPiServer.Web.Mvc.Html
+@using Bookshelf.Models.ViewModels
+
+@model BookItemModel
+
+<form class="form-horizontal">
+    <div class="form-group">
+        @if (!string.IsNullOrEmpty(Model.CurrentPage.Category.ToString()))
+        {
+            <label class="col-xs-2">@Html.LabelFor(x => x.CurrentPage.Category):</label>
+            <div class="col-xs-10">
+                <div @Html.EditAttributes("PageCategory")>
+                    @foreach (var item in Model.Tags)
+                    {
+                        <a href="@item.Url">@item.Title</a>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+</form>
+
+
+

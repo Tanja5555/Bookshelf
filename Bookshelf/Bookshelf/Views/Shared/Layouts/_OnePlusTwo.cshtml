@@ -1,0 +1,19 @@
+﻿@using Bookshelf.Models.ViewModels
+@using Bookshelf.Models.Pages
+
+@model IPageViewModel<SitePageData>
+
+@{Layout = "~/Views/Shared/Layouts/_Root.cshtml";}
+@{Html.RenderPartial("Breadcrumbs", Model);}
+
+
+<div class="row">
+    <div class="col-md-4">
+       @{Html.RenderPartial("SubNavigation", Model);}
+       @RenderSection("RelatedContent", false)
+    </div>
+    <div class="col-md-8">
+        @RenderBody()
+    </div>
+</div>
+

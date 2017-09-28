@@ -1,0 +1,10 @@
+﻿@using EPiServer.Core
+@using EPiServer.Web.Mvc.Html
+
+@model Bookshelf.Models.ViewModels.PageViewModel<Bookshelf.Models.Pages.StartPage>
+
+<div class="default-space">@Html.PropertyFor(m => m.CurrentPage.MainContentArea)</div>
+<div class="default-space">@Html.PropertyFor(m => m.CurrentPage.MainBody)</div>
+  
+
+

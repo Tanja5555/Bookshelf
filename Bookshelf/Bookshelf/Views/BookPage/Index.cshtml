@@ -1,0 +1,42 @@
+﻿@model Bookshelf.Models.ViewModels.PageViewModel<Bookshelf.Models.Pages.BookPage>
+
+@{ Layout = "~/Views/Shared/Layouts/_SubHeaderNoRelatedContent.cshtml"; }
+
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="titleMargin">@Html.PropertyFor(x => x.CurrentPage.PageName)</h1>
+        <h4 class="titleMargin">@Html.PropertyFor(x => x.CurrentPage.SubTitle)</h4>
+       
+        <br />
+        <div class="col-md-4">
+            <div class="cover-image">
+                @Html.PropertyFor(x => x.CurrentPage.PageImage)
+            </div>
+        </div>
+        <div class="col-md-8">      
+            @Html.Action("Full", "BookPage", new { currentPage = Model.CurrentPage })
+
+            <form class="form-horizontal">             
+                <div class="form-group">
+                    <label class="col-xs-2">@Html.LabelFor(x => x.CurrentPage.Author):</label>
+                    <div class="col-xs-10">@Html.PropertyFor(x => x.CurrentPage.Author)</div>
+                </div>
+            </form>
+
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-xs-2">@Html.LabelFor(x => x.CurrentPage.Publisher):</label>
+                    <div class="col-xs-10">@Html.PropertyFor(x => x.CurrentPage.Publisher)</div>
+                </div>
+            </form>
+
+            <p>@Html.PropertyFor(x => x.CurrentPage.BookLinks)</p>
+           
+            <br />
+            @Html.PropertyFor(x => x.CurrentPage.ShortDescription)
+            @Html.PropertyFor(x => x.CurrentPage.Description)
+        </div>
+    </div>
+</div>
+<br />
+
