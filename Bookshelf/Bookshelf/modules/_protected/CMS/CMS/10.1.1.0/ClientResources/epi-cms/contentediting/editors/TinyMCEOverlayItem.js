@@ -1,2 +1,0 @@
-//>>built
-define("epi-cms/contentediting/editors/TinyMCEOverlayItem",["dojo/_base/declare","epi/shell/widget/overlay/Item"],function(_1,_2){return _1([_2],{postMixInProperties:function(){this.inherited(arguments);this.allowedDndTypes=[];}});});

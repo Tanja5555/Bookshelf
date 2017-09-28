@@ -1,2 +1,0 @@
-//>>built
-define("epi-cms/content-approval/viewmodels/ApproverViewModel",["dojo/_base/declare","dojo/Stateful"],function(_1,_2){return _1([_2],{displayName:null,userName:null,languages:null,canApprove:true,serialize:function(){return {userName:this.userName,displayName:this.displayName,languages:this.languages};}});});
