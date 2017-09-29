@@ -32,12 +32,24 @@ namespace Bookshelf.Business.Rendering
             }
             switch (tagName.ToLower())
             {
-                case "span12":
+                case "col-md-12":
                     return "full";
-                case "span8":
-                    return "wide";
-                case "span6":
+
+                case "col-md-6":
                     return "half";
+
+                case "col-md-4":
+                    return "onethird";
+
+                case "col-md-8":
+                    return "twothirds";
+
+                case "col-md-3":
+                    return "onequarter";
+                
+                case "col-md-9":
+                    return "threequarters";
+                
                 default:
                     return string.Empty;
             }

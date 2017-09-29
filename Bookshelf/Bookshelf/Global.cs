@@ -42,10 +42,12 @@ namespace Bookshelf
         /// </summary>
         public static class ContentAreaTags
         {
-            public const string FullWidth = "span12";
-            public const string TwoThirdsWidth = "span8";
-            public const string HalfWidth = "span6";
-            public const string OneThirdWidth = "span4";
+            public const string FullWidth = "col-md-12";
+            public const string TwoThirdsWidth = "col-md-8";
+            public const string ThreeQuartersWidth = "col-md-9";
+            public const string HalfWidth = "col-md-6";
+            public const string OneThirdWidth = "col-md-4";
+            public const string OneQuarterWidth = "col-md-3";
             public const string NoRenderer = "norenderer";
         }
 
@@ -56,16 +58,21 @@ namespace Bookshelf
         {
             public const int FullWidth = 12;
             public const int TwoThirdsWidth = 8;
+            public const int ThreeQuartersWidth = 9;
             public const int HalfWidth = 6;
             public const int OneThirdWidth = 4;
+            public const int OneQuarterWidth = 3;
+
         }
 
         public static Dictionary<string, int> ContentAreaTagWidths = new Dictionary<string, int>
             {
                 { ContentAreaTags.FullWidth, ContentAreaWidths.FullWidth },
                 { ContentAreaTags.TwoThirdsWidth, ContentAreaWidths.TwoThirdsWidth },
+                { ContentAreaTags.ThreeQuartersWidth, ContentAreaWidths.ThreeQuartersWidth },
                 { ContentAreaTags.HalfWidth, ContentAreaWidths.HalfWidth },
-                { ContentAreaTags.OneThirdWidth, ContentAreaWidths.OneThirdWidth }
+                { ContentAreaTags.OneThirdWidth, ContentAreaWidths.OneThirdWidth },
+                { ContentAreaTags.OneQuarterWidth, ContentAreaWidths.OneQuarterWidth }
             };
 
         /// <summary>
