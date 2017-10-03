@@ -1,0 +1,24 @@
+﻿@using EPiServer.Core
+@model Bookshelf.Models.Pages.SitePageData
+
+<div class="border">
+    <div class="">
+        @if (Model.HasTemplate())
+        {
+            <div class="col-md-8">
+                <a href="@Url.PageUrl(Model.LinkURL)">
+                    <img class="partialImage" src="@Url.ContentUrl(Model.PageImage)" />
+                </a>
+            </div>         
+            <div class="col-md-4">
+                <a href="@Url.PageUrl(Model.LinkURL)"><h2 class="partialText">@Model.PageName</h2></a>
+           </div>           
+        }
+        else
+        {
+            <h4 class="partialText">@Model.PageName</h4>
+            <img class="partialImage" src="@Url.ContentUrl(Model.PageImage)" />
+        }
+    </div>
+</div>
+

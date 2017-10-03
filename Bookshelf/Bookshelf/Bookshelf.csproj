@@ -296,7 +296,6 @@
     <Compile Include="Controllers\PreviewController.cs" />
     <Compile Include="Controllers\SlideShowBlockController.cs" />
     <Compile Include="Controllers\WishBookPageListBlockController.cs" />
-    <Compile Include="Controllers\PagePartialController.cs" />
     <Compile Include="Controllers\StartPageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -434,6 +433,7 @@
     <Content Include="Views\Shared\TemplateError.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\Image.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\StringList.cshtml" />
+    <Content Include="Views\Shared\PagePartials\PagePartialWide.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

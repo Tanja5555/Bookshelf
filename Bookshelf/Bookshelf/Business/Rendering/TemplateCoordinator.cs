@@ -43,15 +43,15 @@ namespace Bookshelf.Business.Rendering
                 Name = "PagePartial",
                 Inherit = true,
                 AvailableWithoutTag = true,
-                Path = PagePartialPath("Page.cshtml")
+                Path = PagePartialPath("PagePartial.cshtml")
             });
 
             viewTemplateModelRegistrator.Add(typeof(SitePageData), new TemplateModel
             {
                 Name = "PagePartialWide",
                 Inherit = true,
-                AvailableWithoutTag = false,
-                Path = PagePartialPath("PageWide.cshtml")
+                Tags = new[] {Global.ContentAreaTags.FullWidth, Global.ContentAreaTags.ThreeQuartersWidth , Global.ContentAreaTags.TwoThirdsWidth },
+                Path = PagePartialPath("PagePartialWide.cshtml")
             });     
 
             viewTemplateModelRegistrator.Add(typeof(IContentData), new TemplateModel
