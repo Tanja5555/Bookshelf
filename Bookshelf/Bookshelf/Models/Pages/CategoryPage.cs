@@ -34,5 +34,10 @@ namespace Bookshelf.Models.Pages
             Order = 20)]
         public virtual ContentArea RelatedContentArea { get; set; }
 
+        [Display
+            (Name = "Main Content Area",
+             GroupName = SystemTabNames.Content,
+            Order = 20)]
+        public virtual ContentArea MainContentArea { get; set; }
     }
 }

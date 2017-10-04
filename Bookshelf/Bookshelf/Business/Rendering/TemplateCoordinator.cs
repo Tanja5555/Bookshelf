@@ -52,7 +52,16 @@ namespace Bookshelf.Business.Rendering
                 Inherit = true,
                 Tags = new[] {Global.ContentAreaTags.FullWidth, Global.ContentAreaTags.ThreeQuartersWidth , Global.ContentAreaTags.TwoThirdsWidth },
                 Path = PagePartialPath("PagePartialWide.cshtml")
-            });     
+            });
+
+            viewTemplateModelRegistrator.Add(typeof(TeaserBlock), new TemplateModel
+            {
+                Name = "TeaserBlockWide",
+                Tags = new[] { Global.ContentAreaTags.TwoThirdsWidth, Global.ContentAreaTags.ThreeQuartersWidth, Global.ContentAreaTags.FullWidth },
+                AvailableWithoutTag = true,
+                Path = BlockPath("TeaserBlockWide.cshtml")
+            });
+
 
             viewTemplateModelRegistrator.Add(typeof(IContentData), new TemplateModel
             {
