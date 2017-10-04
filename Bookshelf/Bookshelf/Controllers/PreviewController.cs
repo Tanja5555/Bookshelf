@@ -1,16 +1,16 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
-using EPiServer;
 using EPiServer.Core;
 using EPiServer.Framework.DataAnnotations;
-using EPiServer.Web.Mvc;
 using EPiServer.Framework.Web;
-using EPiServer.Web;
-using EPiServer.ServiceLocation;
-using Bookshelf.Models.ViewModels;
-using Bookshelf.Models.Pages;
 using Bookshelf.Business;
+using Bookshelf.Business.Rendering;
+using Bookshelf.Models.Pages;
+using Bookshelf.Models.ViewModels;
+using EPiServer.Web;
+using EPiServer.Web.Mvc;
+using EPiServer;
 
 namespace Bookshelf.Controllers
 {

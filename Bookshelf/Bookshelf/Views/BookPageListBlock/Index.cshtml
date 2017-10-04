@@ -6,10 +6,8 @@
     foreach (var page in Model.Pages)
     {
         <div class="col-md-3 marginBottom">
-            <p><a href="">@Html.PageLink(page)</a></p>
-            <a href="">
-                <img class="partialImage" src="@Url.ContentUrl(page.PageImage)" />
-            </a>
+            <p>@Html.PageLink(page)</p>
+            <img class="partialImage" src="@Url.ContentUrl(page.PageImage)" />
         </div>
     }
 }

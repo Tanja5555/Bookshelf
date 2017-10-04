@@ -1,14 +1,19 @@
-﻿
+﻿@using Bookshelf
 @model Bookshelf.Models.ViewModels.PageViewModel<Bookshelf.Models.Pages.CategoryPage>
 
 
 @{ Layout = "~/Views/Shared/Layouts/_SubHeader.cshtml"; }
 
-@Html.PropertyFor(m => m.CurrentPage.BookList)
+<div class="row">
+    <div class="bookListFrame">@Html.PropertyFor(m => m.CurrentPage.BookList)</div>
+</div>
 
+<div class="row">
+    @Html.PropertyFor(m => m.CurrentPage.MainContentArea)
+</div>
 
 @section RelatedContent
 {
-    <div class="row">@Html.PropertyFor(x => x.CurrentPage.PageImage)</div>
-    <div class="row">@Html.PropertyFor(x => x.CurrentPage.RelatedContentArea) </div>      
+    <div class="row marginBottom">@Html.PropertyFor(x => x.CurrentPage.PageImage)</div>
+    <div class="row marginBottom">@Html.PropertyFor(x => x.CurrentPage.RelatedContentArea ) </div>      
 }
