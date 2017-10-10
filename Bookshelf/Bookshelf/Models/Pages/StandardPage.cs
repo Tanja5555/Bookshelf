@@ -18,11 +18,6 @@ namespace Bookshelf.Models.Pages
         public virtual ContentArea ContentAreaOne { get; set; }
 
         [Display(
-           GroupName = SystemTabNames.Content,
-           Order = 20)]
-        public virtual ContentArea ContentAreaTwo { get; set; }
-
-        [Display(
          Name = "Listing block",
          Description = "A listing of pages",
          GroupName = SystemTabNames.Content,

@@ -83,13 +83,12 @@ textarea {
 }
 
 .marginBottom{
-    margin-bottom:20px;
+    margin-bottom:30px;
 }
 
 /*----------inline subnavigation---------------*/
 
 .bookshelfDropClass{
-    margin-top:20px;
     margin-bottom:30px;
     text-decoration:none;
 }
@@ -120,7 +119,7 @@ textarea {
 .bookshelfBreadcrumb {
 	background:none;
 	list-style-type:none;
-	margin-bottom:20px;
+	margin-bottom:30px;
 	}	
 	
 .bookshelfBreadcrumb li {
@@ -134,13 +133,18 @@ textarea {
 
 /*---------------------------------*/
 
-.marginBottomCol{
+.containerPadding{
+    padding-top:20px;
+    padding-bottom:30px;
+}
+
+.marginBottom{
     margin-bottom:30px;
-    margin-top:20px;
 }
 
 .default-space {
-    margin-bottom:10px;
+    margin-bottom:30px;
+    margin-top:30px;
 }
 
 .bookListFrame{
@@ -295,9 +299,6 @@ textarea {
 }
 
 /*--------footer----------------------------*/
-.footer h6, h5, h4, h3, h2, h1{
-    text-align:center;
-}
 
 .footer ul{
     list-style-type:none;

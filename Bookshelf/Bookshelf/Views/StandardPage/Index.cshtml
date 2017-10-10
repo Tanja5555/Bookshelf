@@ -2,16 +2,11 @@
 
 @{ Layout = "~/Views/Shared/Layouts/_SubHeaderNoRelatedContent.cshtml"; }
 
-<div class="row marginBottomCol">
+<div class="row marginBottom">
     @Html.PropertyFor(x => x.CurrentPage.ContentAreaOne)
 </div>
 
-<div class="row marginBottomCol">
-    @Html.PropertyFor(x => x.CurrentPage.ContentAreaTwo)
-</div>
-
-<br />
-@Html.PropertyFor(m => m.CurrentPage.List)
+@*@Html.PropertyFor(m => m.CurrentPage.List)*@
 
 
 

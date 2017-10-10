@@ -37,7 +37,10 @@
         @{Html.RenderPartial("Header", Model);}
 
         <hr />
-        @RenderBody()
+        <div class="containerPadding">
+            @RenderBody()
+        </div>
+       
 
         @{Html.RenderPartial("Footer", Model);}
     </div>
