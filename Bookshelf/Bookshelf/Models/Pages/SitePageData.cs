@@ -10,19 +10,19 @@ namespace Bookshelf.Models.Pages
     {
         [CultureSpecific]
         [Display(
-         GroupName = "SEO",
+         GroupName = Global.GroupNames.MetaData,
          Order = 100)]
         public virtual string MetaTitle { get; set; }
 
         [CultureSpecific]
         [Display(
-          GroupName = "SEO",
+          GroupName = Global.GroupNames.MetaData,
           Order = 200)]
         public virtual string MetaKeywords { get; set; }
 
         [CultureSpecific]
         [Display(
-          GroupName = "SEO",
+          GroupName = Global.GroupNames.MetaData,
           Order = 300)]
         [UIHint(UIHint.Textarea)]
         public virtual string MetaDescription { get; set; }

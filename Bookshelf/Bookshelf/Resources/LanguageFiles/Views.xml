@@ -10,12 +10,13 @@
     </contact>
     
     <footer>
-      <company>The Company</company>
-      <customerzone>Customer Zone</customerzone>
+      <books>Books</books>
+      <publishers>Publishers</publishers>
       <login>Log in</login>
       <logout>Log out</logout>
       <news>News &amp; Events</news>
-      <products>Products</products>
+      <aboutme>About me</aboutme>
+      <authors>Authors</authors>
     </footer>
 
     <mainnavigation>

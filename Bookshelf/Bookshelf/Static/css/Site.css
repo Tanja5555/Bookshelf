@@ -86,7 +86,7 @@ textarea {
     margin-bottom:20px;
 }
 
-/*inline subnavigation start*/
+/*----------inline subnavigation---------------*/
 
 .bookshelfDropClass{
     margin-top:20px;
@@ -293,3 +293,17 @@ textarea {
 .teaserPadding{
     padding:10px;
 }
+
+/*--------footer----------------------------*/
+.footer h6, h5, h4, h3, h2, h1{
+    text-align:center;
+}
+
+.footer ul{
+    list-style-type:none;
+}
+
+.footer li a{
+   text-decoration:none;
+}
+/*-------------------------------------------*/

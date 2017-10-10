@@ -42,11 +42,11 @@ namespace Bookshelf.Business
             return new LayoutModel
             {
                 //Logotype = startPage.SiteLogotype,
-                LogotypeLinkUrl = new MvcHtmlString(_urlResolver.GetUrl(SiteDefinition.Current.StartPage)),
-                //ProductPages = startPage.ProductPageLinks,
-                //CompanyInformationPages = startPage.CompanyInformationPageLinks,
-                //NewsPages = startPage.NewsPageLinks,
-                //CustomerZonePages = startPage.CustomerZonePageLinks,
+                //LogotypeLinkUrl = new MvcHtmlString(_urlResolver.GetUrl(SiteDefinition.Current.StartPage)),
+                BookPages = startPage.BookPageLinks,
+                AboutMePages = startPage.AboutMePageLinks,
+                PublishersPages = startPage.PublishersPageLinks,
+                AuthorPages = startPage.AuthorsPageLinks,
                 LoggedIn = requestContext.HttpContext.User.Identity.IsAuthenticated,
                 //LoginUrl = new MvcHtmlString(GetLoginUrl(currentContentLink)),
                 //SearchActionUrl = new MvcHtmlString(EPiServer.Web.Routing.UrlResolver.Current.GetUrl(startPage.SearchPageLink)),

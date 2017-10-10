@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EPiServer.SpecializedProperties;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,10 +12,10 @@ namespace Bookshelf.Models.ViewModels
         public IHtmlString LogotypeLinkUrl { get; set; }
         public bool HideHeader { get; set; }
         public bool HideFooter { get; set; }
-        //public LinkItemCollection ProductPages { get; set; }
-        //public LinkItemCollection CompanyInformationPages { get; set; }
-        //public LinkItemCollection NewsPages { get; set; }
-        //public LinkItemCollection CustomerZonePages { get; set; }
+        public LinkItemCollection BookPages { get; set; }
+        public LinkItemCollection AboutMePages { get; set; }
+        public LinkItemCollection AuthorPages { get; set; }
+        public LinkItemCollection PublishersPages { get; set; }
         public bool LoggedIn { get; set; }
         //public MvcHtmlString LoginUrl { get; set; }
         //public MvcHtmlString LogOutUrl { get; set; }

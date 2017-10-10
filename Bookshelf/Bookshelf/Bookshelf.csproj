@@ -302,7 +302,6 @@
     </Compile>
     <Compile Include="Global.cs" />
     <Compile Include="Helpers\HtmlHelpers.cs" />
-    <Compile Include="Helpers\UrlHelpers.cs" />
     <Compile Include="Models\Blocks\BookPageListBlock.cs" />
     <Compile Include="Models\Blocks\MapBlock.cs" />
     <Compile Include="Models\Blocks\PageListBlock.cs" />
@@ -314,7 +313,6 @@
     <Compile Include="Models\Media\MyImageFile.cs" />
     <Compile Include="Models\Pages\AuthorPage.cs" />
     <Compile Include="Models\Pages\CategoryPage.cs" />
-    <Compile Include="Models\Pages\IHasRelatedContent.cs" />
     <Compile Include="Models\Pages\ListingPage.cs" />
     <Compile Include="Models\Pages\PreviewBlock.cs" />
     <Compile Include="Models\Pages\SearchPage.cs" />
@@ -438,6 +436,7 @@
     <Content Include="Views\Shared\PagePartials\PagePartialWide.cshtml" />
     <Content Include="Views\Shared\Blocks\TeaserBlockWide.cshtml" />
     <Content Include="Views\Shared\Blocks\TeaserBlock.cshtml" />
+    <Content Include="Views\Shared\Footer.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

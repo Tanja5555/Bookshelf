@@ -27,5 +27,18 @@ namespace Bookshelf.Models.Pages
             GroupName = SystemTabNames.Content,
             Order = 20)]
         public virtual XhtmlString MainBody { get; set; }
+
+        [Display(GroupName = Global.GroupNames.SiteSettings, Order = 30)]
+        public virtual LinkItemCollection BookPageLinks { get; set; }
+
+        [Display(GroupName = Global.GroupNames.SiteSettings, Order = 40)]
+        public virtual LinkItemCollection AuthorsPageLinks { get; set; }
+
+        [Display(GroupName = Global.GroupNames.SiteSettings, Order = 50)]
+        public virtual LinkItemCollection AboutMePageLinks { get; set; }
+
+        [Display(GroupName = Global.GroupNames.SiteSettings, Order = 60)]
+        public virtual LinkItemCollection PublishersPageLinks { get; set; }
+
     }
 }
