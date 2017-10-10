@@ -24,17 +24,15 @@ namespace Bookshelf
             [Display(Name = "Default", Order = 2)]
             public const string Default = "Default";
 
-            [Display(Name = "Metadata", Order = 3)]
-            public const string MetaData = "Metadata";
-
-            [Display(Name = "News", Order = 4)]
-            public const string News = "News";
-
-            [Display(Name = "SiteSettings", Order = 6)]
+            [Display(Name = "SiteSettings", Order = 25)]
             public const string SiteSettings = "SiteSettings";
 
             [Display(Name = "Specialized", Order = 7)]
             public const string Specialized = "Specialized";
+
+            [Display(Name = "Metadata", Order = 100)]
+            public const string MetaData = "Metadata";
+
         }
 
         /// <summary>
